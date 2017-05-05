@@ -1,0 +1,49 @@
+<head>
+<meta charset="UTF-8">
+<title>ЗЛОЙ НАЗАРБАЙ</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<style>
+  body {
+  padding-top: 50px;
+  text-align: center;
+  font-family: monaco, monospace;
+  background: url(http://www.orthedu.ru/uploads/posts/2015-08/1440219999_flag-rossii.jpg);
+  background-size: cover;
+}
+
+h1 {
+  font-size: 30px
+}
+h2 {
+  font-size: 20px;
+}
+span {
+  color: #11f;
+}
+input {
+  color: #f11;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+  var i = 0;
+  $("#attack").hide();
+   $("input").click(function(event){
+    i++;
+    $("#attack").show();
+    $("#kz").text("Вы атаковали Казахстан " + i + " раз(а)");
+   });
+
+});
+</script>
+</head>
+<body>
+<h1><span>Казахстан</span> угрожает нам бомбардировкой!</h1>
+<input type="button" id="btnatk" value="Атакавать Казахстан"/>
+
+<div id="attack">
+  <h1 id="kz">Вы атаковали Казахстан</h1>
+  <h2>Наззарбай вами не доволен</h2>
+</div>
+</body>
